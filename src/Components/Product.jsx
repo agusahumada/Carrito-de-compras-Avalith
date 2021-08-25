@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react'
 
 const Product = ({ product }) => {
-  const { id, category, title, price, description, image } = product;
+  const { category, description, image, title, price } = product
 
   return (
     <div className="col-sm-3">
       <div className="card">
-        <img src={image} className="card-img-top" alt="..." />
+        <img alt="..." className="card-img-top" src={image} />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{category}</p>
@@ -15,7 +15,7 @@ const Product = ({ product }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Product;
+export default Product

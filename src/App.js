@@ -1,22 +1,21 @@
-import React, {Fragment, useState, useEffect} from 'react';
-import './App.css';
-import Product from "./Components/Product";
+import React, { Fragment, useState, useEffect } from 'react'
+
+import './App.css'
+import Product from './Components/Product'
 
 function App() {
-
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
-    fetchApi();
-  }, []);
+    fetchApi()
+  }, [])
 
   const fetchApi = async () => {
-    const api = await fetch(
-      "https://fakestoreapi.com/products"
-    );
-    const products = await api.json();
-    setProducts(products);
-  };
+    const api = await fetch('https://fakestoreapi.com/products')
+    const products = await api.json()
+
+    setProducts(products)
+  }
 
   return (
     <Fragment>
@@ -28,13 +27,12 @@ function App() {
               product={product}
               products={products}
               setProducts={setProducts}
-              className="prduct-styles"
             />
           ))}
         </div>
       </div>
     </Fragment>
-  );
+  )
 }
 
-export default App;
+export default App
