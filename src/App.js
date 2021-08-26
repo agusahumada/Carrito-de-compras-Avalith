@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import './App.css'
 import Product from './Components/Product'
 import Header from './Components/Header'
+import Form from './Components/Form'
 
 function App() {
   const [products, setProducts] = useState([])
@@ -33,6 +34,7 @@ function App() {
           ))}
         </div>
       </div>
+      <Form />
     </Fragment>
   )
 }
