@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 
 import './App.css'
 import Product from './Components/Product'
+import Header from './Components/Header'
 
 function App() {
   const [products, setProducts] = useState([])
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <Fragment>
+      <Header />
       <div className="container">
         <div className="row">
           {products.map((product) => (
